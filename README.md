@@ -5,7 +5,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
 
 *DISCLAIMER: Most of the Kexts and ACPI files which are used for this project are pre-built and it´s not my intention to take fales credit for them. I try to link to all original files and creators or guides where I took them from.
 
-*Note: Files marked with a * are essential for booting, all other are providing extra functionality or fixing issues.
+*Note: Files marked with a (e) are essential for booting, all other are providing extra functionality or fixing issues.
 
 
 # Information:
@@ -49,16 +49,16 @@ Tools:
   ACPI:
   
    - SSDT-BAT0: for battary/ charging status
-   - * SSDT-EC-USBX: (created with SSDTTime) (https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html)
-   - SSDT-GPI0: (link to I2C patching)
-   - SSDT-GPRW: XY
-   - * SSDT-HPET: fixing IRQ conflicts (created with SSDTTime) (https://dortania.github.io/Getting-Started-With-ACPI/Universal/irq.html)
+   - SSDT-EC-USBX (e): (created with SSDTTime) (https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html)
+   - SSDT-GPI0: for working trackpad (https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html)
+   - SSDT-GPRW: fixing sleep issues (https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html)
+   - SSDT-HPET (e): fixing IRQ conflicts (created with SSDTTime) (https://dortania.github.io/Getting-Started-With-ACPI/Universal/irq.html)
    - SSDT-LID: making sleep on lid-close work
    - SSDT-PLUG: for CPU managment (created with SSDTTime) (https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html)
    - SSDT-PNLF: for backlight adjustment (https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-prebuilt.html#laptop-skylake-and-kaby-lake)
    - SSDT-Q0A_QC9: dirty work around for fixing ACPI errors with thes methods, still need to find out what they are sued for
    - SSDT-SBUS-MCHC: make the SMBus work for better combatibility (https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html)
-   - * SSDT-XOSI: (https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml)
+   - SSDT-XOSI (e): (https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml)
     
  
    Kext:
@@ -68,8 +68,8 @@ Tools:
    - CPUFriend + DataProvider: more detailed power managment (https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#using-cpu-friend)
    - NoTouchID: disbale ToichID-check for faster authorization
    - NVMeFix: different patches for non-Apple SSDs
-   - * VirtaulSMC + Plugins: for sensor reading
+   - VirtaulSMC + Plugins (e): for sensor reading
    - USBPorts: mapping the USB ports
    - VoodooI2C + Plugins: trackpad
    - VoodooPS2: keyboard
-   - * WhateverGreen: framebuffer patching for iGPU and display ports
+   - WhateverGreen (e): framebuffer patching for iGPU and display ports
