@@ -39,6 +39,8 @@ Tools:
   - SSDTTime: https://github.com/corpnewt/SSDTTime
   - USBMap: https://github.com/corpnewt/USBMap
   - Hackintool: https://github.com/headkaze/Hackintool
+  - ProperTree: https://github.com/corpnewt/ProperTree
+  - gibMacOS: https://github.com/corpnewt/gibMacOS
   
 # Explanation
   
