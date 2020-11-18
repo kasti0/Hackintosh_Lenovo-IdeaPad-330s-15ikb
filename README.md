@@ -10,7 +10,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
 
 # Information:
 
-## Hardware
+### Hardware
 
   - Lenovo Ideapad 330s-15ikb 81F5
   - CPU: Intel i5-8250U (KabyLake-R)
@@ -20,24 +20,24 @@ https://dortania.github.io/OpenCore-Install-Guide/
   - (added) Wifi/BT-Card: BCM94352Z (Lenovo branded)
   
   
-## Software (as of 17/11/2020):
+### Software (as of 17/11/2020):
   - macOS Big Sur 11.0.1
   - OpenCore 0.6.4
   - all used kexts up-to-date
   
-## Feature status:
+### Feature status:
   - ~~external displays connected via HDMI are not recognized after wake from sleep/ reboot, need to re-plug cable (help appreciated)~~ fixed by adding "force-online" under DeviceProperties>Add>PciRoot(0x0)/Pci(0x2,0x0)
   - Wifi, Bluetooth, Airdrop, SideCar, Sleep, Wake, iGPU acceleration etc. all working
   - no non-working features known (please open an issue if you find any)
   
 # Used
 
-## Guides:
+### Guides:
   - Dortania OpenCore guide for Vanilla macOS/ Hackintosh setup: https://dortania.github.io/OpenCore-Install-Guide/
   - RehabMan DSDT patching for working battery status: https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/
   - WEG Framebuffer patching: https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md
 
-## Tools:
+### Tools:
   - SSDTTime: https://github.com/corpnewt/SSDTTime
   - USBMap: https://github.com/corpnewt/USBMap
   - Hackintool: https://github.com/headkaze/Hackintool
@@ -45,32 +45,40 @@ https://dortania.github.io/OpenCore-Install-Guide/
   - gibMacOS: https://github.com/corpnewt/gibMacOS
   
 # Files
+
+### ACPI
   
-  
-  ACPI:
-  
-   - SSDT-BAT0: for battary/ charging status
-   - SSDT-EC-USBX (e): (created with SSDTTime) (https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html)
-   - SSDT-GPI0: for working trackpad (https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html)
-   - SSDT-GPRW: fixing sleep issues (https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html)
-   - SSDT-HPET (e): fixing IRQ conflicts (created with SSDTTime) (https://dortania.github.io/Getting-Started-With-ACPI/Universal/irq.html)
-   - SSDT-LID: making sleep on lid-close work
-   - SSDT-PLUG: for CPU managment (created with SSDTTime) (https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html)
-   - SSDT-PNLF: for backlight adjustment (https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-prebuilt.html#laptop-skylake-and-kaby-lake)
-   - SSDT-Q0A_QC9: dirty work around for fixing ACPI errors with thes methods, still need to find out what they are sued for
-   - SSDT-SBUS-MCHC: make the SMBus work for better combatibility (https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html)
-   - SSDT-XOSI (e): (https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml)
+| Name       | Description           |Source|
+| ------------- |-------------|-------------|
+| SSDT-BAT0      | for battary/ charging status | |
+| SSDT-EC-USBX (e)      |    (created with SSDTTime)   |https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html |
+| SSDT-GPI0 |    for working trackpad   | https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html|
+| SSDT-GPRW | fixing sleep issues      | https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html| 
+| SSDT-HPET (e) |  fixing IRQ conflicts (created with SSDTTime)     | |
+| SSDT-LID |   making sleep on lid-close work    | self |
+| SSDT-PLUG |  for CPU managment (created with SSDTTime)     |https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html |
+| SSDT-PNLF |   for backlight adjustment    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml |
+| SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with thes methods, still need to find out what they are sued for     | self|
+|SSDT-SBUS-MCHC  | make the SMBus work for better combatibility      | https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html|
+| SSDT-XOSI (e) |       |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml |
+ 
+ 
     
  
-   Kext:
+### Kext:
    
-   - AirportBcrmFixup + Brcm: for Wifi and Bluetooth
-   - BrightnessKeys: change brightness with F11/F12 key
-   - CPUFriend + DataProvider: more detailed power managment (https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#using-cpu-friend)
-   - NoTouchID: disbale ToichID-check for faster authorization
-   - NVMeFix: different patches for non-Apple SSDs
-   - VirtaulSMC + Plugins (e): for sensor reading
-   - USBPorts: mapping the USB ports
-   - VoodooI2C + Plugins: trackpad
-   - VoodooPS2: keyboard
-   - WhateverGreen (e): framebuffer patching for iGPU and display ports
+| Name       | Description           |Source|
+| ------------- |-------------|-------------|
+|   AirportBcrmFixup   | for WIFI on non-native WIFI cards         |https://github.com/acidanthera/AirportBrcmFixup |
+|   BrcmPatchRam + Plugins   | uploading Bluetooth firmware       |https://github.com/acidanthera/BrcmPatchRAM |
+|   CPUFriend + DataProvider   |  more detailed power managment        |https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#using-cpu-friend |
+|   NoTouchID   |   disbale ToichID-check for faster authorization       |https://github.com/al3xtjames/NoTouchID |
+| NVMeFix     |   different patches for non-Apple SSDs       | https://github.com/acidanthera/NVMeFix|
+|  VirtaulSMC + Plugins (e)    |  for sensor reading        | https://github.com/acidanthera/VirtualSMC|
+| USBPorts     | mapping the USB ports         |created with USBMap tool |
+| VoodooI2C + Plugins     | trackpad         |https://github.com/VoodooI2C/VoodooI2C |
+|  VoodooPS2    |   keyboard       |https://github.com/acidanthera/VoodooPS2 |
+|  WhateverGreen (e)    | framebuffer patching for iGPU and display ports         | https://github.com/acidanthera/WhateverGreen|
+
+   
+ 
