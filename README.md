@@ -50,13 +50,13 @@ https://dortania.github.io/OpenCore-Install-Guide/
   
 | Name       | Description           |Source|
 | ------------- |-------------|-------------|
-| SSDT-BAT0      | for battary/ charging status | |
-| SSDT-EC-USBX (e)      |    (created with SSDTTime)   |https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html |
+| SSDT-BAT0      | for battary/ charging status |slef, with RehabMan DSDT/SSDT-hotpatch guide |
+| SSDT-EC-USBX (e)      |  fake EC device and manag USB power settings   |created with SSDTTime, https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html |
 | SSDT-GPI0 |    for working trackpad   | https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html|
 | SSDT-GPRW | fixing sleep issues      | https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html| 
-| SSDT-HPET (e) |  fixing IRQ conflicts (created with SSDTTime)     | |
+| SSDT-HPET (e) |  fixing IRQ conflicts      | created with SSDTTime|
 | SSDT-LID |   making sleep on lid-close work    | self |
-| SSDT-PLUG |  for CPU managment (created with SSDTTime)     |https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html |
+| SSDT-PLUG |  for CPU managment      |created with SSDTTime, https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html |
 | SSDT-PNLF |   for backlight adjustment    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml |
 | SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with thes methods, still need to find out what they are sued for     | self|
 |SSDT-SBUS-MCHC  | make the SMBus work for better combatibility      | https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html|
