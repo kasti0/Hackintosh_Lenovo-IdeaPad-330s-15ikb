@@ -7,7 +7,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 
 **Most of the Kexts and ACPI files which are used for this project are pre-built and it´s not my intention to take false credit for them. I try to link to all original files and creators or guides where I took the files from.**
 
-*Note: Files marked with a (e) are essential for booting, all other are providing extra functionality or fixing issues. If you decide do not use any of the files then you need to make changes according to this in the config.plist*
+*Note: Files marked with (e) are essential for booting, all other are providing extra functionality or fixing issues. If you decide do not use any of the files then you need to make changes according to this in the config.plist*
 
 *DISCLAIMER: Use the provided files at your own risk. I´m not responsible if you break your laptop by just copy-pasting everything.*
 
