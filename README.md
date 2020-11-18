@@ -85,7 +85,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
 | SSDT-LID |   making sleep on lid-close work    | self |
 | SSDT-PLUG |  for CPU managment      |created with SSDTTime, https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html |
 | SSDT-PNLF |   for backlight adjustment    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml |
-| SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with thes methods, still need to find out what they are sued for     | self|
+| SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with these methods, still need to find out what they are sued for     | self|
 |SSDT-SBUS-MCHC  | make the SMBus work for better combatibility      | https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html|
 | SSDT-XOSI (e) |       |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml |
  
