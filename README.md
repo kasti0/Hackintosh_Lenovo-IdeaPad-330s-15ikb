@@ -65,7 +65,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
  
     
  
-### Kext:
+### Kext
    
 | Name       | Description           |Source|
 | ------------- |-------------|-------------|
