@@ -10,7 +10,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
 
 # Information:
 
-Hardware
+## Hardware
 
   - Lenovo Ideapad 330s-15ikb 81F5
   - CPU: Intel i5-8250U (KabyLake-R)
@@ -20,30 +20,31 @@ Hardware
   - (added) Wifi/BT-Card: BCM94352Z (Lenovo branded)
   
   
-Software (as of 17/11/2020):
+## Software (as of 17/11/2020):
   - macOS Big Sur 11.0.1
   - OpenCore 0.6.4
   - all used kexts up-to-date
   
-Features status:
-  - external displays connected via HDMI are not recognized after wake from sleep/ reboot, need to re-plug cable (help appreciated)
+## Feature status:
+  - ~~external displays connected via HDMI are not recognized after wake from sleep/ reboot, need to re-plug cable (help appreciated)~~ fixed by adding "force-online" under DeviceProperties>Add>PciRoot(0x0)/Pci(0x2,0x0)
+  - Wifi, Bluetooth, Airdrop, SideCar, Sleep, Wake, iGPU acceleration etc. all working
   - no non-working features known (please open an issue if you find any)
   
 # Used
 
-Guides:
+## Guides:
   - Dortania OpenCore guide for Vanilla macOS/ Hackintosh setup: https://dortania.github.io/OpenCore-Install-Guide/
   - RehabMan DSDT patching for working battery status: https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/
   - WEG Framebuffer patching: https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md
 
-Tools:
+## Tools:
   - SSDTTime: https://github.com/corpnewt/SSDTTime
   - USBMap: https://github.com/corpnewt/USBMap
   - Hackintool: https://github.com/headkaze/Hackintool
   - ProperTree: https://github.com/corpnewt/ProperTree
   - gibMacOS: https://github.com/corpnewt/gibMacOS
   
-# Explanation
+# Files
   
   
   ACPI:
