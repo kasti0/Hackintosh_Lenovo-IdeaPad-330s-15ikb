@@ -1,6 +1,7 @@
 # Hackintosh_Lenovo-IdeaPad-330s-15ikb
 
 A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. If your Lenovo IdeaPad or laptop in general is slightly different this complete setup or parts of it may not work for you! Please don´t blindly copy-paste everything.
+
 **For the best success follow the vanilla OpenCore guide created by Dortania to set everything up:
 https://dortania.github.io/OpenCore-Install-Guide/**
 
