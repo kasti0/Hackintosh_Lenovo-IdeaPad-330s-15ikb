@@ -10,7 +10,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
 
 
 
-# Information:
+## Information:
 
 ### Hardware
 
@@ -35,7 +35,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
   
   
   
-# Used
+## Used
 
 ### Guides:
   - Dortania OpenCore guide for Vanilla macOS/ Hackintosh setup: https://dortania.github.io/OpenCore-Install-Guide/
@@ -52,7 +52,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
   
 
 
-# Setup
+## Setup
 
 ### BIOS
 
@@ -120,7 +120,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
 
  
  
-# Set up macOS bootable USB stick with the provided files
+## Set up macOS bootable USB stick with the provided files
 
  1. download the OpenCore bootloader (the provided config.plist is only for version 0.6.4, for newer versions it may need to be updated and could break OC): https://dortania.github.io/builds/?product=OpenCorePkg&viewall=true&version=0.6.4
  2. place all provided files in the respective folders
