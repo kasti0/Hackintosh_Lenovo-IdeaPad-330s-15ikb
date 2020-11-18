@@ -125,7 +125,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
  1. download the OpenCore bootloader (the provided config.plist is only for version 0.6.4, for newer versions it may need to be updated and could break OC): https://dortania.github.io/builds/?product=OpenCorePkg&viewall=true&version=0.6.4
  2. place all provided files in the respective folders
  3. (optional) add the "Resources" files from the link provided above to get a GUI for the boot picker
- 4. follow this guide to get the macOS installer and get a bootable USB stick (for Windows): https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos
+ 4. follow this guide to get the macOS installer and create a bootable USB stick (for Windows): https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos
  5. copy the OpenCore folders BOOT and OC to the EFI folder on your USB stick
- 6. insert the USB stick on the IdeaPad, press the power button and the repeatedly "F12" to select the stick in the boot manager
- 7. you should (hopefully) be able to see the OpenCore boot picker with the option of "Install macOS..."
+ 6. insert the USB stick on the IdeaPad, press the power button and then repeatedly "F12" to select the USB in the boot manager
+ 7. you should (hopefully) be able to see the OpenCore boot picker with the option to "Install macOS..."
