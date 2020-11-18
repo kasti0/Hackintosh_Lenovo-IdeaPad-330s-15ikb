@@ -4,7 +4,7 @@ A short discription how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. I
 Follow the vanilla OpenCore guide by Dortania to set everything up:
 https://dortania.github.io/OpenCore-Install-Guide/
 
-*DISCLAIMER: Most of the Kexts and ACPI files which are used for this project are pre-built and it´s not my intention to take fales credit for them. I try to link to all original files and creators or guides where I took them from.*
+*DISCLAIMER: Most of the Kexts and ACPI files which are used for this project are pre-built and it´s not my intention to take false credit for them. I try to link to all original files and creators or guides where I took the files from.*
 
 *Note: Files marked with a (e) are essential for booting, all other are providing extra functionality or fixing issues.*
 
@@ -114,5 +114,18 @@ https://dortania.github.io/OpenCore-Install-Guide/
  
 
 #### Resources
- - these files are needed only for cosmetic reasons and add a visual interface to the boot picker menu:
+ - these files are needed only for cosmetic reasons and add a GUI to the OpenCore boot picker menu:
  https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui
+ - if you don´t want to use the OC GUI you need to change the following in the config.plist: Misc> Boot> PickerMode: Builtin
+
+ 
+ 
+# Set up macOS bootable USB stick with the provided files
+
+ 1. download the OpenCore bootloader (the provided config.plist is only for version 0.6.4, for newer versions it may need to be updated and could break OC): https://dortania.github.io/builds/?product=OpenCorePkg&viewall=true&version=0.6.4
+ 2. place all provided files in the respective folders
+ 3. (optional) add the "Resources" files from the link provided above to get a GUI for the boot picker
+ 4. follow this guide to get the macOS installer and get a bootable USB stick (for Windows): https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos
+ 5. copy the OpenCore folders BOOT and OC to the EFI folder on your USB stick
+ 6. insert the USB stick on the IdeaPad, press the power button and the repeatedly "F12" to select the stick in the boot manager
+ 7. you should (hopefully) be able to see the OpenCore boot picker with the option of "Install macOS..."
