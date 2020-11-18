@@ -64,17 +64,12 @@ https://dortania.github.io/OpenCore-Install-Guide/
  - Boot> USB Boot: Enabled
  -> everything else can be left default
  
- 
-### SMBIOS
-
- - refer to this guide for more information: https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#platforminfo
- - for this setup the SMBIOS of the MacBookPro15,2 with i5-8259U is used, as it´s the closest we can match the i5-8250U of the Ideapad (https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.3-13-mid-2018-true-tone-display-touch-bar-specs.html)
- - according to the Dortania guide a MacBookPro14,X is better, feel free to try and use those SMBIOS and see if it gets you better results
-
 
 ### config.plist
  - the config.plist is the exact result of follwing the Dortania guide for Kabylake laptops: https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#starting-point
-
+ - **do not forget** to set up the Platforminfo/Generic/ section, this is unique to every Hackintosh as it contains SerialNumber, MLB, ROM. Use this guide: https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#platforminfo
+ - for this setup the SMBIOS of the MacBookPro15,2 with i5-8259U is used, as it´s the closest we can match the i5-8250U of the Ideapad (https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.3-13-mid-2018-true-tone-display-touch-bar-specs.html)
+ - according to the Dortania guide a MacBookPro14,X is better, feel free to try and use those SMBIOS and see if it gets you better results. More information on choosing the right SMBIOS: https://dortania.github.io/OpenCore-Install-Guide/extras/smbios-support.html#how-to-decide
 
 ### Files
 
@@ -98,7 +93,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
     
  
 #### Kext
-*Note: Kexts won´t be updated on a regular basis or not at all. Please use the provided links or hackintool to manually update kexts. DO NOT use hackintools method to install kexts. Just download them and copy-paste new versions in to your /EFI/OC/KEXT folder.*
+*Note: Kexts won´t be updated on a regular basis or not at all. Please use the provided links or hackintool to manually update kexts. **DO NOT use hackintools method to install kexts**. Just download them and copy-paste new versions in to your /EFI/OC/KEXT folder.*
    
 | Name       | Description           |Source|
 | ------------- |-------------|-------------|
@@ -114,4 +109,10 @@ https://dortania.github.io/OpenCore-Install-Guide/
 |  WhateverGreen (e)    | framebuffer patching for iGPU and display ports         | https://github.com/acidanthera/WhateverGreen|
 
    
+#### Drivers
+ - only the additional driver HfsPlus.efi is needed, all other are provided by OpenCore: https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi
  
+
+### Resources
+ - these files are needed only for cosmetic reasons and add a visual interface to the boot picker menu:
+ https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui
