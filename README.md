@@ -105,9 +105,9 @@ https://dortania.github.io/OpenCore-Install-Guide/
 |   AirportBcrmFixup   | for WIFI on non-native WIFI cards         |https://github.com/acidanthera/AirportBrcmFixup |
 |   BrcmPatchRam + Plugins   | uploading Bluetooth firmware       |https://github.com/acidanthera/BrcmPatchRAM |
 |   CPUFriend (+ CPUFriendDataProvider)   |  more detailed power managment, to create the DataProvider kext follow the instructions in the source link        |https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#using-cpu-friend |
-|   NoTouchID   |   disbale ToichID-check for faster authorization       |https://github.com/al3xtjames/NoTouchID |
+|   NoTouchID   |   disbale TouchID-check for faster authorization       |https://github.com/al3xtjames/NoTouchID |
 | NVMeFix     |   different patches for non-Apple SSDs       | https://github.com/acidanthera/NVMeFix|
-|  VirtaulSMC + Plugins (e)    |  for sensor reading        | https://github.com/acidanthera/VirtualSMC|
+|  VirtaulSMC + Plugins (e)    |  SMC virtualisation and sensor reading        | https://github.com/acidanthera/VirtualSMC|
 | USBPorts     | mapping the USB ports         |created with USBMap tool |
 | VoodooI2C + Plugins     | trackpad         |https://github.com/VoodooI2C/VoodooI2C |
 |  VoodooPS2    |   keyboard       |https://github.com/acidanthera/VoodooPS2 |
