@@ -1,12 +1,14 @@
 # Hackintosh_Lenovo-IdeaPad-330s-15ikb
 
-A short discription how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. If your Lenovo IdeaPad or laptop in general is slightly different this setup or parts of it may not work for you! Please don´t blindly copy-paste everything.
-Follow the vanilla OpenCore guide by Dortania to set everything up:
-https://dortania.github.io/OpenCore-Install-Guide/
+A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. If your Lenovo IdeaPad or laptop in general is slightly different this complete setup or parts of it may not work for you! Please don´t blindly copy-paste everything.
+**For the best success follow the vanilla OpenCore guide created by Dortania to set everything up:
+https://dortania.github.io/OpenCore-Install-Guide/**
 
-*DISCLAIMER: Most of the Kexts and ACPI files which are used for this project are pre-built and it´s not my intention to take false credit for them. I try to link to all original files and creators or guides where I took the files from.*
+**Most of the Kexts and ACPI files which are used for this project are pre-built and it´s not my intention to take false credit for them. I try to link to all original files and creators or guides where I took the files from.**
 
-*Note: Files marked with a (e) are essential for booting, all other are providing extra functionality or fixing issues.*
+*Note: Files marked with a (e) are essential for booting, all other are providing extra functionality or fixing issues. If you decide do not use any of the files then you need to make changes according to this in the config.plist*
+
+*DISCLAIMER: Use the provided files at your own risk. I´m not responsible if you break your laptop by just copy-pasting everything.*
 
 
 
@@ -117,7 +119,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
 #### Resources
  - these files are needed only for cosmetic reasons and add a GUI to the OpenCore boot picker menu:
  https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui
- - if you don´t want to use the OC GUI you need to change the following in the config.plist: Misc> Boot> PickerMode: Builtin
+ - if you want to use the OC GUI you need to change the following in the config.plist: Misc> Boot> PickerMode: External
 
  
  
