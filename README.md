@@ -98,7 +98,7 @@ https://dortania.github.io/OpenCore-Install-Guide/
     
  
 #### Kext
-*Note: Kexts won´t be updated on a regular basis or not at all. Please use the provided links or hackintool to manually update kexts. DO NOT use hackintools method to install kexts. Just download them and copy-paste new versions in to your OC/KEXT/ folder.*
+*Note: Kexts won´t be updated on a regular basis or not at all. Please use the provided links or hackintool to manually update kexts. DO NOT use hackintools method to install kexts. Just download them and copy-paste new versions in to your /EFI/OC/KEXT folder.*
    
 | Name       | Description           |Source|
 | ------------- |-------------|-------------|
