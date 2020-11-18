@@ -113,6 +113,6 @@ https://dortania.github.io/OpenCore-Install-Guide/
  - only the additional driver HfsPlus.efi is needed, all other are provided by OpenCore: https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi
  
 
-### Resources
+#### Resources
  - these files are needed only for cosmetic reasons and add a visual interface to the boot picker menu:
  https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui
