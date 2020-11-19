@@ -82,6 +82,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 | ------------- |-------------|-------------|
 | SSDT-BAT0      | for battary/ charging status |slef, with RehabMan DSDT/SSDT-hotpatch guide |
 | SSDT-EC-USBX (e)      |  fake EC device and manag USB power settings   |created with SSDTTime, https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html |
+| SSDT-ECRW      |  adds read/ write access for the EC   |taken form Rehabman DSDT patch guide, https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/ |
 | SSDT-GPI0 |    for working trackpad   | https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html|
 | SSDT-GPRW | fixing sleep issues      | https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html| 
 | SSDT-HPET (e) |  fixing IRQ conflicts      | created with SSDTTime|
@@ -90,7 +91,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 | SSDT-PNLF |   for backlight adjustment    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml |
 | SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with these methods, still need to find out what they are sued for     | self|
 |SSDT-SBUS-MCHC  | make the SMBus work for better combatibility      | https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html|
-| SSDT-XOSI (e) |       |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml |
+| SSDT-XOSI | makes the laptop think it´s booting Windows, necessary mainly for a working trackpad    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml |
  
  
     
@@ -100,7 +101,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
    
 | Name       | Description           |Source|
 | ------------- |-------------|-------------|
-|   AirportBcrmFixup   | for WIFI on non-native WIFI cards         |https://github.com/acidanthera/AirportBrcmFixup |
+|   AirportBrcmFixup   | for WIFI on non-native WIFI cards         |https://github.com/acidanthera/AirportBrcmFixup |
 |   BrcmPatchRam + Plugins   | uploading Bluetooth firmware       |https://github.com/acidanthera/BrcmPatchRAM |
 |   CPUFriend (+ CPUFriendDataProvider)   |  more detailed power managment, to create the DataProvider kext follow the instructions in the source link        |https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#using-cpu-friend |
 |   NoTouchID   |   disbale TouchID-check for faster authorization       |https://github.com/al3xtjames/NoTouchID |
