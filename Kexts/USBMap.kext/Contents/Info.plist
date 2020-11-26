@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.0 Copyright © 2018 Headsoft. All rights reserved.</string>
+	<string>v1.0</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.Headsoft.USBPorts</string>
+	<string>com.corpnewt.USBMap</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>USBPorts</string>
+	<string>USBMap</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
@@ -30,20 +30,12 @@
 			<string>AppleUSBMergeNub</string>
 			<key>IONameMatch</key>
 			<string>XHC</string>
-			<key>IOProbeScore</key>
-			<integer>5000</integer>
 			<key>IOProviderClass</key>
 			<string>AppleUSBXHCIPCI</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
-				<key>kUSBSleepPortCurrentLimit</key>
-				<integer>2100</integer>
-				<key>kUSBSleepPowerSupply</key>
-				<integer>2600</integer>
-				<key>kUSBWakePortCurrentLimit</key>
-				<integer>2100</integer>
-				<key>kUSBWakePowerSupply</key>
-				<integer>3200</integer>
+				<key>kUSBMuxEnabled</key>
+				<true/>
 				<key>port-count</key>
 				<data>
 				DwAAAA==
@@ -52,8 +44,6 @@
 				<dict>
 					<key>HS01</key>
 					<dict>
-						<key>DevSpeed</key>
-						<integer>2</integer>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -61,10 +51,17 @@
 						AQAAAA==
 						</data>
 					</dict>
+					<key>HS02</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>9</integer>
+						<key>port</key>
+						<data>
+						AgAAAA==
+						</data>
+					</dict>
 					<key>HS03</key>
 					<dict>
-						<key>DevSpeed</key>
-						<integer>2</integer>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -74,8 +71,6 @@
 					</dict>
 					<key>HS04</key>
 					<dict>
-						<key>DevSpeed</key>
-						<integer>1</integer>
 						<key>UsbConnector</key>
 						<integer>255</integer>
 						<key>port</key>
@@ -85,8 +80,6 @@
 					</dict>
 					<key>HS07</key>
 					<dict>
-						<key>DevSpeed</key>
-						<integer>2</integer>
 						<key>UsbConnector</key>
 						<integer>255</integer>
 						<key>port</key>
@@ -96,10 +89,8 @@
 					</dict>
 					<key>HS08</key>
 					<dict>
-						<key>DevSpeed</key>
-						<integer>2</integer>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>3</integer>
 						<key>port</key>
 						<data>
 						CAAAAA==
@@ -107,8 +98,6 @@
 					</dict>
 					<key>SS01</key>
 					<dict>
-						<key>DevSpeed</key>
-						<integer>3</integer>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -118,8 +107,6 @@
 					</dict>
 					<key>SS02</key>
 					<dict>
-						<key>DevSpeed</key>
-						<integer>3</integer>
 						<key>UsbConnector</key>
 						<integer>9</integer>
 						<key>port</key>
@@ -129,8 +116,6 @@
 					</dict>
 					<key>SS03</key>
 					<dict>
-						<key>DevSpeed</key>
-						<integer>3</integer>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>

@@ -107,7 +107,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 |   NoTouchID   |   disbale TouchID-check for faster authorization       |https://github.com/al3xtjames/NoTouchID |
 | NVMeFix     |   different patches for non-Apple SSDs       | https://github.com/acidanthera/NVMeFix |
 |  VirtaulSMC + Plugins (e)    |  SMC virtualisation and sensor reading        | https://github.com/acidanthera/VirtualSMC |
-| USBPorts     | mapping the USB ports         |created with USBMap tool |
+| USBMap     | mapping the USB ports         |created with USBMap tool |
 | VoodooI2C + Plugins     | trackpad         |https://github.com/VoodooI2C/VoodooI2C |
 |  VoodooPS2    |   keyboard       |https://github.com/acidanthera/VoodooPS2 |
 |  WhateverGreen (e)    | framebuffer patching for iGPU and display ports         | https://github.com/acidanthera/WhateverGreen |
