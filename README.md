@@ -59,12 +59,13 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 
 ### BIOS
 
- - Configuration> Intel Virtual Technology: Disabled
+ - ~~Configuration> Intel Virtual Technology: Disabled~~ (this option actually refers to the "VT-x" technology, which can be left enabled. VT-d is not accessible from the BIOS on this laptop)
  - Configuration> Storage> Controller Mode: AHCI mode
  - Security> Intel Platform Trust Technology: Disbaled
  - Security> Secure Boot: Disbaled
  - Boot> Boot Mode: UEFI (should already be UEFI, just to be sure)
  - Boot> USB Boot: Enabled
+ 
  -> everything else can be left default
  
 
@@ -80,7 +81,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
   
 | Name       | Description           |Source|
 | ------------- |-------------|-------------|
-| SSDT-BAT0      | for battary/ charging status |slef, with RehabMan DSDT/SSDT-hotpatch guide |
+| SSDT-BAT0      | for battary/ charging status |self, with RehabMan DSDT/SSDT-hotpatch guide |
 | SSDT-EC-USBX (e)      |  fake EC device and manag USB power settings   |created with SSDTTime, https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html |
 | SSDT-ECRW      |  adds read/ write access for the EC   |taken form Rehabman DSDT patch guide, https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/ |
 | SSDT-GPI0 |    for working trackpad   | https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html|
@@ -89,7 +90,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 | SSDT-LID |   making sleep on lid-close work    | self |
 | SSDT-PLUG |  for CPU managment      |created with SSDTTime, https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html |
 | SSDT-PNLF |   for backlight adjustment    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml |
-| SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with these methods, still need to find out what they are sued for     | self|
+| SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with these methods, still need to find out what they are used for     | self|
 |SSDT-SBUS-MCHC  | make the SMBus work for better combatibility      | https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html|
 | SSDT-XOSI | makes the laptop think it´s booting Windows, necessary mainly for a working trackpad    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml |
  
