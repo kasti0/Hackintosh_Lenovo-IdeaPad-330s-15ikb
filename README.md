@@ -2,7 +2,7 @@
 
 
 
-A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. If your Lenovo IdeaPad or laptop in general is slightly different this complete setup or parts of it may not work for you! Please don´t blindly copy-paste anything.
+####A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. 
 
 **For the best success follow the vanilla OpenCore guide created by Dortania to set everything up:
 https://dortania.github.io/OpenCore-Install-Guide/**
@@ -11,7 +11,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 
 *Note: Files marked with (e) are essential for booting, all other are providing extra functionality or fixing issues. If you decide to not use any of the files then you need to make changes according to this in the config.plist*
 
-*DISCLAIMER: Use the provided files at your own risk. I´m not responsible if you break your laptop by just copy-pasting everything.*
+*DISCLAIMER: Use the provided files at your own risk. I´m not responsible if you break your laptop by just copy-pasting everything. If your laptop model is slightly different this setup may not work for you! Please don´t blindly copy-paste anything.*
 
 ![About this mac](/aboutThisMac.png)
 
@@ -23,7 +23,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
   - CPU: Intel i5-8250U (KabyLake-R)
   - iGPU: UHD620 (KabyLake-R)
   - Disk 1: 512GB WD NVMe
-  - (added) Disk 2: 512GB sATA SSD (for Windows)
+  - (added) Disk 2: 250GB sATA SSD (for Windows)
   - (replaced) Wifi/BT-Card: BCM94352Z (Lenovo branded)
   
   
@@ -70,6 +70,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
  
  -> everything else can be left default
  
+ <br />
  
 
 ### config.plist
@@ -77,6 +78,8 @@ https://dortania.github.io/OpenCore-Install-Guide/**
  - **do not forget** to set up the Platforminfo/Generic/ section, this is unique to every Hackintosh as it contains SerialNumber, MLB, ROM. Use [this guide](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#platforminfo) 
  - for this setup the SMBIOS of the [MacBookPro15,2 with i5-8259U](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.3-13-mid-2018-true-tone-display-touch-bar-specs.html) is used, as it´s the closest we can match the i5-8250U of the Ideapad
  - according to the Dortania guide a MacBookPro14,X is better, feel free to try and use those SMBIOS and see if it gets you better results. More information on [choosing the right SMBIOS](https://dortania.github.io/OpenCore-Install-Guide/extras/smbios-support.html#how-to-decide) 
+
+<br />
 
 ### Files
 
@@ -97,7 +100,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 |SSDT-SBUS-MCHC  | make the SMBus work for better combatibility      | https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html|
 | SSDT-XOSI | makes the laptop think it´s booting Windows, necessary mainly for a working trackpad    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml |
  
- 
+<br />
     
  
 #### Kext
@@ -120,17 +123,19 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 |  WhateverGreen (e)    | framebuffer patching for iGPU and display ports         | https://github.com/acidanthera/WhateverGreen |
 |  YogaSMC    | provides additional features to Lenovo laptops such as ThinkPad, Ideapad and Yoga (WIP)  | https://github.com/zhen-zen/YogaSMC |
 
+<br />
    
 #### Drivers
  - only the additional driver HfsPlus.efi is needed, all other are provided by OpenCore: https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi
  
+<br />
 
 #### Resources
  - these files are needed only for cosmetic reasons and add a GUI to the OpenCore boot picker menu:
  https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-opencore-s-gui
  - if you want to use the OC GUI you need to change the following in the config.plist: Misc> Boot> PickerMode: External
 
- 
+<br /> 
  
 ## Set up macOS bootable USB stick with the provided files
 
@@ -142,20 +147,13 @@ https://dortania.github.io/OpenCore-Install-Guide/**
  6. insert the USB stick on the IdeaPad, press the power button and then repeatedly "F12" to select the USB in the boot manager
  7. you should (hopefully) be able to see the OpenCore boot picker with the option to "Install macOS..."
 
- 
- 
-
-
-
-
-
-
-
-
- 
- 
-
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 ### Advanced BIOS modification
 **Warning: this can potentially damage or brick your BIOS.**
