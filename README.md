@@ -1,13 +1,13 @@
 # Hackintosh_Lenovo-IdeaPad-330s-15ikb
 
-A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. If your Lenovo IdeaPad or laptop in general is slightly different this complete setup or parts of it may not work for you! Please don´t blindly copy-paste everything.
+A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. If your Lenovo IdeaPad or laptop in general is slightly different this complete setup or parts of it may not work for you! Please don´t blindly copy-paste anything.
 
 **For the best success follow the vanilla OpenCore guide created by Dortania to set everything up:
 https://dortania.github.io/OpenCore-Install-Guide/**
 
-**Most of the Kexts and ACPI files which are used for this project are pre-built and it´s not my intention to take false credit for them. I try to link to all original files and creators or guides where I took the files from.**
+**No pre-built kexts or ACPI files will be provided in this repo. Please use the provided links to download each file.**
 
-*Note: Files marked with (e) are essential for booting, all other are providing extra functionality or fixing issues. If you decide do not use any of the files then you need to make changes according to this in the config.plist*
+*Note: Files marked with (e) are essential for booting, all other are providing extra functionality or fixing issues. If you decide to not use any of the files then you need to make changes according to this in the config.plist*
 
 *DISCLAIMER: Use the provided files at your own risk. I´m not responsible if you break your laptop by just copy-pasting everything.*
 
@@ -22,7 +22,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
   - iGPU: UHD620 (KabyLake-R)
   - Disk 1: 512GB WD NVMe
   - (added) Disk 2: 512GB sATA SSD (for Windows)
-  - (added) Wifi/BT-Card: BCM94352Z (Lenovo branded)
+  - (replaced) Wifi/BT-Card: BCM94352Z (Lenovo branded)
   
   
 ### Software (as of 17/11/2020):
@@ -67,6 +67,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
  - Boot> USB Boot: Enabled
  
  -> everything else can be left default
+ 
  
 
 ### config.plist
@@ -135,3 +136,21 @@ https://dortania.github.io/OpenCore-Install-Guide/**
  5. copy the OpenCore folders BOOT and OC to the EFI folder on your USB stick
  6. insert the USB stick on the IdeaPad, press the power button and then repeatedly "F12" to select the USB in the boot manager
  7. you should (hopefully) be able to see the OpenCore boot picker with the option to "Install macOS..."
+
+ 
+ 
+
+ 
+ 
+
+
+
+### Advanced BIOS modification
+**Warning: this can potentially damage or brick your BIOS.**
+
+To achieve 4k@30Hz over HDMI 1.4 and overall better iGPU performance it´s necessary to change the "DVMT pre-allocated" and "total DVMT pre-allocated" in the BIOS. Lenovo is locking down the BIOS so only a few options are available to the normal user and even the moddified GRUB shell method (explained [here] (https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#what-is-cfg-lock)) is blocked by Lenovo.
+However there´s another method to change hidden BIOS settings without actually modding the BIOS: via the RU.efi tool as explained [here](https://www.reddit.com/r/hackintosh/comments/hz2rtm/cfg_lockunlocking_alternative_method/).
+
+You can follow that guide to change the DVMT. Instead of "CFG" search through your extracted BIOS file for "DVMT" and note down the VarOffsets. Then proceed with the RU-tool like the guide explaines.
+
+There´s a sample picture on how these values can look like provided in the repo. These values may vary for each BIOS version and/ or motherboard, so do not at all use the shown values!
