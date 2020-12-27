@@ -1,6 +1,6 @@
 # macOS on the Lenovo IdeaPad 330s-15ikb
 
-![About this mac](/aboutThisMac.png)
+
 
 A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. If your Lenovo IdeaPad or laptop in general is slightly different this complete setup or parts of it may not work for you! Please don´t blindly copy-paste anything.
 
@@ -13,7 +13,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 
 *DISCLAIMER: Use the provided files at your own risk. I´m not responsible if you break your laptop by just copy-pasting everything.*
 
-
+![About this mac](/aboutThisMac.png)
 
 ## Information:
 
@@ -28,7 +28,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
   
   
 ### Software (as of 17/11/2020):
-  - macOS Big Sur 11.0.1
+  - macOS Big Sur 11.1
   - OpenCore 0.6.4
   - all used kexts up-to-date
   
@@ -43,17 +43,17 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 ## Used
 
 ### Guides:
-  - Dortania OpenCore guide for Vanilla macOS/ Hackintosh setup: https://dortania.github.io/OpenCore-Install-Guide/
-  - RehabMan DSDT patching for working battery status: https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/
-  - WEG Framebuffer patching: https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md
+  - [Dortania OpenCore guide](https://dortania.github.io/OpenCore-Install-Guide/) for Vanilla macOS/ Hackintosh setup
+  - [RehabMan DSDT patching](https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/) for working battery status
+  - [WEG Framebuffer patching](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.IntelHD.en.md) 
 
 
 ### Tools:
-  - SSDTTime: https://github.com/corpnewt/SSDTTime
-  - USBMap: https://github.com/corpnewt/USBMap
-  - Hackintool: https://github.com/headkaze/Hackintool
-  - ProperTree: https://github.com/corpnewt/ProperTree
-  - gibMacOS: https://github.com/corpnewt/gibMacOS
+  - [SSDTTime](https://github.com/corpnewt/SSDTTime)
+  - [USBMap](https://github.com/corpnewt/USBMap)
+  - [Hackintool](https://github.com/headkaze/Hackintool)
+  - [ProperTree](https://github.com/corpnewt/ProperTree)
+  - [gibMacOS](https://github.com/corpnewt/gibMacOS) 
   
 
 
@@ -73,10 +73,10 @@ https://dortania.github.io/OpenCore-Install-Guide/**
  
 
 ### config.plist
- - the config.plist is the exact result of follwing the Dortania guide for Kabylake laptops: https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#starting-point
- - **do not forget** to set up the Platforminfo/Generic/ section, this is unique to every Hackintosh as it contains SerialNumber, MLB, ROM. Use this guide: https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#platforminfo
- - for this setup the SMBIOS of the MacBookPro15,2 with i5-8259U is used, as it´s the closest we can match the i5-8250U of the Ideapad (https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.3-13-mid-2018-true-tone-display-touch-bar-specs.html)
- - according to the Dortania guide a MacBookPro14,X is better, feel free to try and use those SMBIOS and see if it gets you better results. More information on choosing the right SMBIOS: https://dortania.github.io/OpenCore-Install-Guide/extras/smbios-support.html#how-to-decide
+ - the config.plist is the exact result of follwing the Dortania guide [for Kabylake laptops](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#starting-point)
+ - **do not forget** to set up the Platforminfo/Generic/ section, this is unique to every Hackintosh as it contains SerialNumber, MLB, ROM. Use [this guide](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/kaby-lake.html#platforminfo) 
+ - for this setup the SMBIOS of the [MacBookPro15,2 with i5-8259U](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.3-13-mid-2018-true-tone-display-touch-bar-specs.html) is used, as it´s the closest we can match the i5-8250U of the Ideapad
+ - according to the Dortania guide a MacBookPro14,X is better, feel free to try and use those SMBIOS and see if it gets you better results. More information on [choosing the right SMBIOS](https://dortania.github.io/OpenCore-Install-Guide/extras/smbios-support.html#how-to-decide) 
 
 ### Files
 
@@ -84,16 +84,16 @@ https://dortania.github.io/OpenCore-Install-Guide/**
   
 | Name       | Description           |Source|
 | ------------- |-------------|-------------|
-| SSDT-BAT0      | for battary/ charging status |self, with RehabMan DSDT/SSDT-hotpatch guide |
+| SSDT-BAT0      | for battery/ charging status |self-made, with RehabMan DSDT/SSDT-hotpatch guide |
 | SSDT-EC-USBX (e)      |  fake EC device and manag USB power settings   |created with SSDTTime, https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html |
 | SSDT-ECRW      |  adds read/ write access for the EC   |taken form Rehabman DSDT patch guide, https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/ |
 | SSDT-GPI0 |    for working trackpad   | https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html|
 | SSDT-GPRW | fixing sleep issues      | https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html| 
 | SSDT-HPET (e) |  fixing IRQ conflicts      | created with SSDTTime|
-| SSDT-LID |   making sleep on lid-close work    | self |
+| SSDT-LID |   making sleep on lid-close work    | self-made |
 | SSDT-PLUG |  for CPU managment      |created with SSDTTime, https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug.html |
 | SSDT-PNLF |   for backlight adjustment    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml |
-| SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with these methods, still need to find out what they are used for     | self|
+| SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with these methods, still need to find out what they are used for     | self-made|
 |SSDT-SBUS-MCHC  | make the SMBus work for better combatibility      | https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html|
 | SSDT-XOSI | makes the laptop think it´s booting Windows, necessary mainly for a working trackpad    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml |
  
@@ -101,7 +101,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
     
  
 #### Kext
-*Note: Kexts won´t be updated on a regular basis or not at all. Please use the provided links or hackintool to manually update kexts. **DO NOT use hackintools method to install kexts**. Just download them and copy-paste new versions in to your /EFI/OC/KEXT folder.*
+*Note: Please use the provided links, download the kexts and copy-paste them to your /EFI/OC/KEXT folder.*
    
 | Name       | Description           |Source|
 | ------------- |-------------|-------------|
@@ -134,7 +134,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
  
 ## Set up macOS bootable USB stick with the provided files
 
- 1. download the OpenCore bootloader (the provided config.plist is only for version 0.6.4, for newer versions it may need to be updated and could break OC): https://dortania.github.io/builds/?product=OpenCorePkg&viewall=true&version=0.6.4
+ 1. download the OpenCore bootloader (the provided config.plist is only for version 0.6.4, and will not work on any other version): https://dortania.github.io/builds/?product=OpenCorePkg&viewall=true&version=0.6.4
  2. place all provided files in the respective folders
  3. (optional) add the "Resources" files from the link provided above to get a GUI for the boot picker
  4. follow this guide to get the macOS installer and create a bootable USB stick (for Windows): https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos
@@ -159,3 +159,5 @@ However there´s another method to change hidden BIOS settings without actually 
 You can follow that guide to change the DVMT. Instead of "CFG" search through your extracted BIOS file for "DVMT" and note down the VarOffsets. Then proceed with the RU-tool like the guide explaines.
 
 There´s a sample picture on how these values can look like provided in the repo. These values may vary for each BIOS version and/ or motherboard, so do not at all use the shown values!
+
+![DVMT](/DVMT-BIOS-Offsets.png)
