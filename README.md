@@ -1,4 +1,6 @@
-# Hackintosh_Lenovo-IdeaPad-330s-15ikb
+# macOS on the Lenovo IdeaPad 330s-15ikb
+
+![About this mac](/aboutThisMac.png)
 
 A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. If your Lenovo IdeaPad or laptop in general is slightly different this complete setup or parts of it may not work for you! Please don´t blindly copy-paste anything.
 
