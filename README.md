@@ -2,7 +2,7 @@
 
 
 
-####A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. 
+#### A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. 
 
 **For the best success follow the vanilla OpenCore guide created by Dortania to set everything up:
 https://dortania.github.io/OpenCore-Install-Guide/**
