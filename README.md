@@ -38,7 +38,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
   - Wifi, Bluetooth, Airdrop, SideCar, Sleep, Wake, iGPU acceleration etc. all working
   - no non-working features known (please open an issue if you find any)
   
-  
+<br />  
   
 ## Used
 
@@ -55,7 +55,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
   - [ProperTree](https://github.com/corpnewt/ProperTree)
   - [gibMacOS](https://github.com/corpnewt/gibMacOS) 
   
-
+<br />
 
 ## Setup
 
