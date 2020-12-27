@@ -104,14 +104,17 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 | Name       | Description           |Source|
 | ------------- |-------------|-------------|
 |   AirportBrcmFixup   | for WIFI on non-native WIFI cards         |https://github.com/acidanthera/AirportBrcmFixup |
-|   BrcmPatchRam + Plugins   | uploading Bluetooth firmware       |https://github.com/acidanthera/BrcmPatchRAM |
+|   AppleALC  | for native audio Input/ output (used with layoutid=14)         |https://github.com/acidanthera/AppleALC |
+|   BrcmBluetoothInjector + BrcmFirmwareData + BrcmPatchRam3   | uploading Bluetooth firmware       |https://github.com/acidanthera/BrcmPatchRAM |
+|   BrightnessKeys  | make F11 and F12 work as brightness keys |https://github.com/acidanthera/BrightnessKeys |
 |   CPUFriend (+ CPUFriendDataProvider)   |  more detailed power managment, to create the DataProvider kext follow the instructions in the source link        |https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#using-cpu-friend |
+|   Lilu (e)  |   basically needed for almost all other kexts to work       |https://github.com/acidanthera/Lilu |
 |   NoTouchID   |   disbale TouchID-check for faster authorization       |https://github.com/al3xtjames/NoTouchID |
 | NVMeFix     |   different patches for non-Apple SSDs       | https://github.com/acidanthera/NVMeFix |
-|  VirtaulSMC + Plugins (e)    |  SMC virtualisation and sensor reading        | https://github.com/acidanthera/VirtualSMC |
+|  VirtaulSMC (e) + SMCProcessor + SMCBatteryManager    |  SMC virtualisation and sensor reading        | https://github.com/acidanthera/VirtualSMC |
 | USBMap     | mapping the USB ports         |created with USBMap tool |
-| VoodooI2C + Plugins     | trackpad         |https://github.com/VoodooI2C/VoodooI2C |
-|  VoodooPS2    |   keyboard       |https://github.com/acidanthera/VoodooPS2 |
+| VoodooI2C + VoodooI2CHID      | trackpad         |https://github.com/VoodooI2C/VoodooI2C |
+|  VoodooPS2Controller     |   keyboard (remove VoodooInput and VoodooPS2Trackpad from Plugins folder)       |https://github.com/acidanthera/VoodooPS2 |
 |  WhateverGreen (e)    | framebuffer patching for iGPU and display ports         | https://github.com/acidanthera/WhateverGreen |
 |  YogaSMC    | provides additional features to Lenovo laptops such as ThinkPad, Ideapad and Yoga (WIP)  | https://github.com/zhen-zen/YogaSMC |
 
