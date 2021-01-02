@@ -90,7 +90,7 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 | SSDT-BAT0      | for battery/ charging status |self-made, with RehabMan DSDT/SSDT-hotpatch guide |
 | SSDT-EC-USBX (e)      |  fake EC device and manag USB power settings   |created with SSDTTime, https://dortania.github.io/Getting-Started-With-ACPI/Universal/ec-fix.html |
 | SSDT-ECRW      |  adds read/ write access for the EC   |taken form Rehabman DSDT patch guide, https://www.tonymacx86.com/threads/guide-how-to-patch-dsdt-for-working-battery-status.116102/ |
-| SSDT-GPI0 |    for working trackpad   | https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html|
+| ~~SSDT-GPI0~~ |    ~~for working trackpad~~ <br />**REPLACED BY SSDT-TouchPad**  | ~~https://dortania.github.io/Getting-Started-With-ACPI/Laptops/trackpad-methods/manual.html~~|
 | SSDT-GPRW | fixing sleep issues      | https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html| 
 | SSDT-HPET (e) |  fixing IRQ conflicts      | created with SSDTTime|
 | SSDT-LID |   making sleep on lid-close work    | self-made |
@@ -98,7 +98,8 @@ https://dortania.github.io/OpenCore-Install-Guide/**
 | SSDT-PNLF |   for backlight adjustment    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml |
 | SSDT-Q0A_QC9 |  dirty work around for fixing ACPI errors with these methods, still need to find out what they are used for     | self-made|
 |SSDT-SBUS-MCHC  | make the SMBus work for better combatibility      | https://dortania.github.io/Getting-Started-With-ACPI/Universal/smbus.html|
-| SSDT-XOSI | makes the laptop think it´s booting Windows, necessary mainly for a working trackpad    |https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml |
+|SSDT-TouchPad | makes the TPD0 (TouchPad) device think Windows is booted to make it fully functional (SSDT-GPI0 is merged into this) | self-made|
+| ~~SSDT-XOSI~~ | ~~makes the laptop think it´s booting Windows, necessary mainly for a working trackpad~~ <br />**REPLACED BY SSDT-TouchPad**    |~~https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml~~ |
  
 <br />
     
