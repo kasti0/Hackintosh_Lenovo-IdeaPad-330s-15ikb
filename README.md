@@ -1,5 +1,6 @@
 # macOS on the Lenovo IdeaPad 330s-15ikb
 
+### This repo, the readme and all the files it containes won't get updated as I'm not using my hackintosh anymore. Please see below for which OpenCore version the config.plist is applicable and don't use it with any other version.
 
 
 #### A short discription on how to set up macOS on the Lenovo Ideapad 330s-15ikb 81F5. 
